@@ -62,7 +62,7 @@ body {
 
 .infoContainer {
     width: 35ch;
-
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
 }
 
 .infoContainer>table {
@@ -70,7 +70,7 @@ body {
     vertical-align: middle;
 
     font-size: 25px;
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.491);
+    
 }
 
 
@@ -91,6 +91,7 @@ td.param-icon > span{
 }
 
 a.title{
-    font-size: 65px;
+    font-size: 50px;
     padding-right: 15px;
+    overflow-wrap: break-word;
 }
