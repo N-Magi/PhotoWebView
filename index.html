@@ -4,206 +4,107 @@
 <head>
     <meta charset="utf-8">
     <link href="index.css" rel="stylesheet">
-    <link href="switch.css" rel="stylesheet">
-    <link href="exifswitch.css" rel="stylesheet">
-    <link href="Exif.svg" rel="hypertext">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&display=swap" rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
-    <script>
-
-        //false = day true = night
-        function onThemeCahngeSwichChanged(event) {
-            let themeSwitch = document.getElementById("theme");
-            let status = themeSwitch.checked;
-            //console.log(status);
-            var html = document.getElementsByTagName("html")[0];
-            if (status) {
-                //night mode process
-                html.classList.add("night");
-                return;
-            }
-            html.classList.remove("night");
-        }
-
-        //true = show false = none
-        function onExifShowCahngeSwichChanged(event) {
-            let themeSwitch = document.getElementById("showexif");
-            let info = document.getElementsByClassName("photoInfo")[0];
-            let status = themeSwitch.checked;
-            //console.log(status);
-            if (status) {
-                //show exif infomation
-                info.style.display = "";
-                return;
-            }
-            info.style.display = "none";
-
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-
-            //初期化
-            onThemeCahngeSwichChanged();
-            onExifShowCahngeSwichChanged();
-
-            let themeSwitch = document.getElementById("theme");
-            themeSwitch.addEventListener("change", onThemeCahngeSwichChanged);
-            let exifSwitch = document.getElementById("showexif");
-            exifSwitch.addEventListener("change", onExifShowCahngeSwichChanged);
-            //console.log("event added");
-        });
-    </script>
 
 </head>
 
 <body>
+    <div class="background">
+        <img src="f3908416.jpg">
+    </div>
+    <div class="contentBox">
+        <img src="f3908416.jpg" class="photoContainer">
 
+        <div class="infoContainer">
+            <p><a class="title">成長</a> by <a class="Photographer">Rikkido</a></p>
 
-    <header>
-        <label class="exifSwitch">
-            <input type="checkbox" id="showexif">
-            <div class="exifbox">
-                <span>Exif</span>
-            </div>
+            <table>
+                <tbody>
 
-        </label>
-        <label class="themeSwitch">
-            <input type="checkbox" id="theme" checked>
+                    <tr>
+                        <td class="param-icon">
+                            <span class="material-symbols-outlined">
+                                photo_camera
+                            </span>
+                        </td>
+                        <td class="value">NIKON D7200</td>
+                    </tr>
+                    <tr>
+                        <td class="param-icon">
+                            <span class="material-symbols-outlined">
+                                lens
+                            </span>
+                        </td>
+                        <td class="value">AF-S DX NIKKOR 18-140mm f/3.5-5.6G ED VR</td>
+                    </tr>
+                    <tr>
+                        <td class="param-icon">
+                            <span class="material-symbols-outlined">
+                                straighten
+                            </span>
+                        </td>
+                        <td class="value">14mm</td>
+                    </tr>
 
-            <div class="swbox">
-                <div class="select1"><span class="material-symbols-outlined">
-                        clear_night
-                    </span></div>
-                <div class="select2"><span class="material-symbols-outlined">
-                        clear_day
-                    </span></div>
-                <div class="circle"></div>
-            </div>
-        </label>
-    </header>
-    <main>
-        <div class="photoBox">
-            <!-- <div class="pad"></div> -->
-            <img src="f3908416.jpg" alt="Content" class="photoContent">
-            <div class="photoInfo" style="display: none;">
-                <table>
-                    <tbody>
-                        <tr>
-                            <td class="param">Subject</td>
-                            <td class="param-icon">
-                                <span class="material-symbols-outlined">
-                                    image
-                                </span>
-                            </td>
-                            <td class="value">成長</td>
-                        </tr>
-                        <tr>
-                            <td class="param">Camera
+                    <tr>
+                        <td class="param-icon">
+                            <span class="material-symbols-outlined">
+                                camera
+                            </span>
+                        </td>
+                        <td class="value">f/5</td>
+                    </tr>
 
-                            </td>
-                            <td class="param-icon">
-                                <span class="material-symbols-outlined">
-                                    photo_camera
-                                </span>
-                            </td>
-                            <td class="value">NIKON D7200</td>
-                        </tr>
-                        <tr>
-                            <td class="param">Lens </td>
-                            <td class="param-icon">
-                                <span class="material-symbols-outlined">
-                                    lens
-                                </span>
-                            </td>
-                            <td class="value">AF-S DX NIKKOR 18-140mm f/3.5-5.6G ED VR</td>
-                        </tr>
-                        <tr>
-                            <td class="param">Focal-Length</td>
-                            <td class="param-icon">
-                                <span class="material-symbols-outlined">
-                                    straighten
-                                </span>
-                            </td>
-                            <td class="value">14mm</td>
-                        </tr>
+                    <tr>
+                        <td class="param-icon">
+                            ISO
+                        </td>
+                        <td class="value">100</td>
+                    </tr>
 
-                        <tr>
-                            <td class="param">Aperture </td>
-                            <td class="param-icon">
-                                <span class="material-symbols-outlined">
-                                    camera
-                                </span>
-                            </td>
-                            <td class="value">f/5</td>
-                        </tr>
+                    <tr>
+                        <td class="param-icon">
+                            <span class="material-symbols-outlined">
+                                shutter_speed
+                            </span>
+                        </td>
+                        <td class="value">1/100</td>
+                    </tr>
 
-                        <tr>
-                            <td class="param">ISO</td>
-                            <td class="param-icon">
-                                ISO
-                            </td>
-                            <td class="value">100</td>
-                        </tr>
-
-                        <tr>
-                            <td class="param">Speed </td>
-                            <td class="param-icon">
-                                <span class="material-symbols-outlined">
-                                    shutter_speed
-                                </span>
-                            </td>
-                            <td class="value">100</td>
-                        </tr>
-
-                        <tr>
-                            <td class="param">Exposure</td>
-                            <td class="param-icon">
-                                <span class="material-symbols-outlined">
-                                    exposure
-                                </span>
-                            </td>
-                            <td class="value">+1</td>
-                        </tr>
-                        <tr>
-                            <td class="param">Flash</td>
-                            <td class="param-icon">
-                                <span class="material-symbols-outlined">
-                                    flash_on
-                                </span>
-                            </td>
-                            <td class="value">None</td>
-                        </tr>
-                        <tr>
-                            <td class="param">Size</td>
-                            <td class="param-icon">
-                                <span class="material-symbols-outlined">
-                                    photo_size_select_large
-                                </span>
-                            </td>
-                            <td class="value">4000×6000</td>
-                        </tr>
-                        <tr>
-                            <td class="param">Photographer</td>
-                            <td class="param-icon">
-                                <span class="material-symbols-outlined">
-                                    person
-                                </span>
-                            </td>
-                            <td class="value">Rikkido</td>
-                        </tr>
-
-
-                    </tbody>
-                </table>
-            </div>
+                    <tr>
+                        <td class="param-icon">
+                            <span class="material-symbols-outlined">
+                                exposure
+                            </span>
+                        </td>
+                        <td class="value">+1</td>
+                    </tr>
+                    <tr>
+                        <td class="param-icon">
+                            <span class="material-symbols-outlined">
+                                flash_on
+                            </span>
+                        </td>
+                        <td class="value">None</td>
+                    </tr>
+                    <tr>
+                        <td class="param-icon">
+                            <span class="material-symbols-outlined">
+                                photo_size_select_large
+                            </span>
+                        </td>
+                        <td class="value">4000×6000</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    </main>
-    <footer>
-    </footer>
+    </div>
 </body>
 
 </html>
